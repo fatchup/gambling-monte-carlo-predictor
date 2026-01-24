@@ -88,6 +88,61 @@ This means on average, you lose $0.25 for every $1 wagered.
 
 ## Running the Application
 
+### Option 1: Python Source (All Platforms)
+
 ```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the application
 python parlay_simulator_gui.py
 ```
+
+### Option 2: macOS Executable
+
+1. **Clone the repository**:
+```bash
+git clone https://github.com/fatchup/gambling-monte-carlo-predictor.git
+cd gambling-monte-carlo-predictor
+```
+
+2. **Build the macOS app**:
+```bash
+bash build_mac.sh
+```
+
+3. **Run the app**:
+```bash
+open dist/Parlay\ Simulator.app
+```
+
+Or double-click `Parlay Simulator.app` in Finder.
+
+### Option 3: Windows Executable
+
+Download the pre-built `.exe` from the `dist/` folder and double-click to run, or build it yourself:
+
+```bash
+bash build_windows.sh
+```
+
+Then run: `dist/Parlay Simulator.exe`
+
+## Building for Different Platforms
+
+The `Parlay Simulator.spec` file is configured to work on both macOS and Windows. To build:
+
+**On macOS:**
+```bash
+bash build_mac.sh
+```
+
+**On Windows (PowerShell):**
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install pyinstaller
+pyinstaller "Parlay Simulator.spec"
+```
+
+The output will be in the `dist/` folder.

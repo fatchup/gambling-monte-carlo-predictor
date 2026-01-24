@@ -36,3 +36,15 @@ exe = EXE(
     codesign_identity=None,
     entitlements_file=None,
 )
+
+# macOS app bundle configuration
+app = BUNDLE(
+    exe,
+    name='Parlay Simulator.app',
+    icon=None,
+    bundle_identifier='com.parlaysimulator.app',
+    info_plist={
+        'NSPrincipalClass': 'NSApplication',
+        'NSHighResolutionCapable': 'True',
+    },
+)

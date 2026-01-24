@@ -1,0 +1,4 @@
+# Requirements for Parlay Simulator
+
+tkinter
+pyinstaller
